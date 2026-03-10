@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy: EDI Data Handling & Security</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 20px auto; padding: 0 20px; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 25px; }
+        .highlight { font-weight: bold; color: #000; }
+        section { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Privacy Policy: EDI Data Handling & Security</h1>
+    
+    <p>To pass the Chrome Web Store's "Enhanced Protection" review, this policy outlines our transparent practices regarding how raw EDI strings—which may contain sensitive commercial data—are processed and secured.</p>
+
+    <section>
+        <h2>1. Data Collection & Usage</h2>
+        <p>We collect raw <strong>X12 EDI transmissions</strong> (specifically segments such as ISA, GS, and transaction sets like 350, 309, and 315) <strong>only</strong> when the user explicitly initiates a "Validation" or "Audit" request.</p>
+        <ul>
+            <li><span class="highlight">Purpose:</span> Data is used exclusively to perform structural compliance checks against CBP CATAIR specifications.</li>
+            <li><span class="highlight">Limitation:</span> We do not scrape or collect data in the background. Data collection is strictly user-triggered.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Data Retention (The "Ephemeral" Standard)</h2>
+        <p>To ensure the security of your shipping and manifest data, we adhere to strict retention limits:</p>
+        <ul>
+            <li><span class="highlight">Validation Data:</span> Raw EDI strings are processed in memory and are <strong>not permanently stored</strong> on our servers. Once the validation report is generated, the raw input is purged from the session.</li>
+            <li><span class="highlight">Metadata:</span> We may store non-sensitive metadata (e.g., <em>"350 Ocean Manifest validated successfully"</em>) to provide users with a history of their activity and to manage credit balances.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Encryption & Transit</h2>
+        <p>All data transmitted between the extension and our validation engine is encrypted using <strong>TLS 1.2/1.3 (SSL)</strong>. We utilize <strong>AES-256 encryption</strong> for any sensitive configuration data stored within the user's <code>chrome.storage.sync</code> area.</p>
+    </section>
+
+    <section>
+        <h2>4. Third-Party Disclosure</h2>
+        <p>We do not sell, trade, or rent user EDI data to third parties. Data is <strong>never</strong> shared with logistics competitors, marketing firms, or data brokers.</p>
+    </section>
+
+</body>
+</html>
