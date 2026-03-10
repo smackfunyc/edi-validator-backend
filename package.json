@@ -4,7 +4,7 @@
   "description": "EDI Validator API — CBP CATAIR compliance backend",
   "main": "index.js",
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "vercel dev",
